@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Financiero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="analitico.css">
+    <link rel="icon" href="pikachu.png" type="image/png">
+</head>
+<body class="bg-light">
+    <div class="container py-3">
+        <div class="cabecera">
+            <button type="button" class="btn-Atras" link="Banco-principal.html">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="titulo-principal">Análisis Financiero</h1>
+        </div>
+
+        <div class="seccion-titulo">
+            <h2>RESUMEN FINANCIERO</h2>
+        </div>
+        
+        <div class="card mb-4 shadow-sm grafico-container">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <div class="grafico-placeholder">
+                            [Área para la muestra grafica]
+                            </div>
+                    </div>
+                    
+                    <div class="col-md-6 leyendas-container">
+                        <div class="leyenda-item">
+                            <span class="etiqueta deposito-color"></span>
+                            Depósitos
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="etiqueta retiro-color"></span>
+                            Retiros
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="etiqueta servicios-color"></span>
+                            Servicios Pagados
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="etiqueta saldo-color"></span>
+                            Saldo Disponible
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row tarjetas-container">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>Saldo Disponible</h3>
+                        <div class="valor-info saldo" id="card_saldo">$0.00</div>
+                        <div class="text-muted">Disponible</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>Retiros</h3>
+                        <div class="valor-info retiro" id="card_retiro">$0.00</div>
+                        <div class="text-muted">Total</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>Depósitos</h3>
+                        <div class="valor-info deposito" id="card_deposito">$0.00</div>
+                        <div class="text-muted">Total</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>Servicios Pagados</h3>
+                        <div class="valor-info servicios" id="card_pago">$0.00</div>
+                        <div class="text-muted">Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="links-boton.js"></script>
+
+    <script src="analitico.js"></script> 
+</body>
+</html>

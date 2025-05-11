@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Transacciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="historial.css">
+    <link rel="icon" href="pikachu.png" type="image/png">
+    <!-- Agregar SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Agregar jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container py-3">
+        <div class="header-container">
+            <button type="button" class="btn-back" link="Banco-principal.html">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="page-title">Historial Transacciones</h1>
+        </div>
+        
+        <div class="transaction-card">
+            <div class="transaction-header">
+                <h2 class="m-0">ULTIMAS TRANSACCIONES</h2>
+            </div>
+            
+            <div class="transaction-list">
+                <!-- Aquí se cargarán las transacciones dinámicamente -->
+                <!-- Se mostrará un mensaje temporal mientras carga -->
+                <div class="transaction-item loading">Cargando transacciones...</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script para depurar -->
+    <script>
+        console.log("Página de historial cargada");
+    </script>
+    
+    <script src="links-boton.js"></script>
+    <script type="module"  src="Transacciones.js"></script>
+</body>
+</html>

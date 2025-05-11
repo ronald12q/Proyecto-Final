@@ -1,0 +1,117 @@
+:root {
+    --deposit-color: #388e3c;
+    --withdrawal-color: #d32f2f;
+    --payment-color: #1976d2;
+    --header-bg: #ffcb05;
+}
+
+body {
+    font-family: 'Gidole', sans-serif;
+    background-color: #f8f9fa;
+    color: #212121;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    transition: background-color 0.2s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-back:hover {
+    background-color: #e9ecef;
+}
+
+.btn-back i {
+    font-size: 1.2rem;
+    color: #343a40;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    margin: 0;
+    flex-grow: 1;
+    
+}
+
+.transaction-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.transaction-header {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.transaction-list {
+    border-radius: 0 0 12px 12px;
+    background-color: white;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-type {
+    font-weight: bold;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.transaction-type.deposit {
+    background-color: rgba(56, 142, 60, 0.1);
+    color: var(--deposit-color);
+}
+
+.transaction-type.withdrawal {
+    background-color: rgba(211, 47, 47, 0.1);
+    color: var(--withdrawal-color);
+}
+
+.transaction-type.payment {
+    background-color: rgba(25, 118, 210, 0.1);
+    color: var(--payment-color);
+}
+
+.transaction-amount {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.transaction-amount.positive {
+    color: var(--deposit-color);
+}
+
+.transaction-amount.negative {
+    color: var(--withdrawal-color);
+}
+

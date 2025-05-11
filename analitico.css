@@ -1,0 +1,170 @@
+:root {
+    --color-header: #ffcb05;
+    --color-deposito: #3498db;
+    --color-retiro: #e74c3c;
+    --color-servicios: #f39c12;
+    --color-saldo: #2ecc71;
+    --color-texto: #343a40;
+    --color-fondo: #f8f9fa;
+    --color-borde: #dee2e6;
+    --color-texto-secundario: #6c757d;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Gidole', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Cabecera */
+.cabecera {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-principal {
+    font-size: 1.75rem;
+    margin: 0 auto;
+    text-align: left;
+    flex-grow: 1;
+    position: relative;
+     /* Compensa el botón de atrás */
+}
+
+.btn-Atras {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.btn-Atras:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.btn-Atras i {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+}
+
+/* Sección de título */
+.seccion-titulo {
+    background-color: var(--color-header);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.seccion-titulo h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.9rem;
+    margin: 0;
+    color: var(--color-texto);
+}
+
+/* Zona del gráfico */
+.grafico-container {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.grafico-placeholder {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto-secundario);
+    border: 2px dashed var(--color-borde);
+    font-style: italic;
+}
+
+.leyendas-container {
+    padding: 1rem;
+}
+
+.leyenda-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.leyenda-item:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.etiqueta {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.deposito-color { background-color: var(--color-deposito); }
+.retiro-color { background-color: var(--color-retiro); }
+.servicios-color { background-color: var(--color-servicios); }
+.saldo-color { background-color: var(--color-saldo); }
+
+/* Tarjetas */
+.tarjetas-container {
+    margin-top: 1.5rem;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15) !important;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+}
+
+.valor-info {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.saldo { color: var(--color-saldo); }
+.retiro { color: var(--color-retiro); }
+.deposito { color: var(--color-deposito); }
+.servicios { color: var(--color-servicios); }
+
+.text-muted {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+

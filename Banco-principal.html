@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Banco</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="pikachu.png" type="image/png">
+    <link rel="stylesheet" href="Principal-banco.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <main class="w-100">
+            <form id="Principal-contenedor" class="mx-auto">
+                <div class="Cabecera py-3">
+                    <h1 id="titulo" class="mb-1 text-center"></h1>
+                    <p id="Cuenta" class="mb-0 text-center"></p>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center my-3">
+                    <button type="button" id="btn-depositar" class="boton btn btn-primary m-2 px-4 py-2">
+                        <i class="fas fa-money-bill-wave mr-2"></i> Depositar
+                    </button>
+                    <button type="button" id="btn-retirar" class="boton btn btn-primary m-2 px-4 py-2">
+                        <i class="fas fa-hand-holding-usd mr-2"></i> Retirar
+                    </button>
+                    <button type="button" id="btn-consultar" class="boton btn btn-primary m-2 px-4 py-2">
+                        <i class="fas fa-wallet mr-2"></i> Consultar Saldo
+                    </button>
+                    <button type="button" id="btn-pagar-servicios" class="boton btn btn-primary m-2 px-4 py-2">
+                        <i class="fas fa-lightbulb mr-2"></i> Pagar Servicios
+                    </button>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center my-3">
+                    <button type="button" id="btn-historial" class="boton btn btn-primary m-2 px-4 py-2" link="Historial.html">
+                        <i class="fas fa-history mr-2"></i> Historial
+                    </button>
+                    <button type="button" id="btn-graficas" class="boton btn btn-primary m-2 px-4 py-2" link="Dashboard-analitico.html">
+                        <i class="fas fa-chart-line mr-2"></i> Gráficas
+                    </button>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="button" id="btn-salir" class="boton btn btn-secondary px-4 py-2" link="index.html">
+                        <i class="fas fa-sign-out-alt mr-2"></i> Salir
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <div id="modal-container" class="modales-ventanas">
+        <div id="Modal-deposito" class="modal-contenido">
+            <h1>Depositar Dinero</h1>
+            <section class="Input-deposito">
+                <label for="cantidad-deposito">Monto a Depositar:</label>
+                <input type="number" placeholder="Ingrese la cantidad" class="form-control mb-3" id="cantidad-deposito" min="0" step="0.01">
+                <div>
+                    <button type="button" id="confirmar-deposito" class="Botones-deposito">Depositar</button>
+                    <button type="button" class="Botones-deposito btn-cancelar">Cancelar</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="Modal-Retiro" class="modal-contenido">
+            <h1>Retirar Dinero</h1>
+            <section class="input-retiro">
+                <label for="cantidad-retiro">Monto a Retirar:</label>
+                <input type="number" placeholder="Ingrese la cantidad" class="form-control mb-3" id="cantidad-retiro" min="0" step="0.01">
+                <div>
+                    <button type="button" id="confirmar-retiro" class="Botones-retiro">Retirar</button>
+                    <button type="button" class="Botones-retiro btn-cancelar">Cancelar</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="Modal-Balance" class="modal-contenido">
+            <h1>Consultar Saldo</h1>
+            <section class="input-balance">
+                <p>Su saldo disponible es:</p>
+                <p id="Saldo-disponible">$<span id="saldo-display">0.00</span></p>
+                <button type="button" class="Botones-balance btn-cerrar">Cerrar</button>
+            </section>
+        </div>
+
+        <div id="Modal-Servicios" class="modal-contenido">
+            <h1>Pago de servicios</h1>
+            <section class="input-servicios">
+                <label for="servicio">Servicio a Pagar:</label>
+                <input type="text" placeholder="Ej: Luz Eléctrica, Agua" class="form-control mb-3" id="servicio">
+                <label for="cantidad-servicio">Monto a Pagar:</label>
+                <input type="number" placeholder="Ingrese la cantidad" class="form-control mb-3" id="cantidad-servicio" min="0" step="0.01">
+                <div>
+                    <button type="button" id="confirmar-pago" class="Botones-servicios">Pagar</button>
+                    <button type="button" class="Botones-servicios btn-cancelar">Cancelar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="Transacciones.js"></script>
+    <script type="module" src="banco-principal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="links-boton.js"></script>
+    
+</body>
+</html>

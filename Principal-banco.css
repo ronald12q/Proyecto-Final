@@ -1,0 +1,196 @@
+body {
+    font-family: 'Gidole', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 25px;
+    width: 90%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    overflow: hidden;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.Cabecera {
+    background-color:#ffcb05;
+    color: black;
+    width: 100%;
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 20px 30px;
+}
+
+#titulo {
+    font-size: 1.5rem;
+}
+
+#Cuenta {
+    font-size: 0.9rem;
+}
+
+.boton {
+    margin: 10px;
+    transition: all 0.3s ease;
+    width: calc(50% - 20px);
+    max-width: 250px;
+    height: 60px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton i {
+    margin-right: 8px;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: rgb(166, 4, 4);
+    border-color: rgb(166, 4, 4);
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(219, 10, 10);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(193, 2, 2, 0.15);
+}
+
+.modales-ventanas {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    display: none;
+    background-color: white;
+    padding: 40px; /* Aumenté el padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 700px; /* Aumenté el ancho máximo */
+    min-height: 200px; /* Añadí altura mínima */
+    text-align: center;
+    z-index: 1001;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+    overflow-y: auto; /* Para contenido largo */
+    max-height: 90vh; /* Limita la altura máxima */
+}
+
+.modal-contenido h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.8rem; /* Título más grande */
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+
+.modal-contenido input[type="number"],
+.modal-contenido input[type="text"] {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px; /* Inputs más grandes */
+    width: 100%;
+    height: 7vh;
+    box-sizing: border-box;
+    font-size: 1rem; /* Texto más grande en inputs */
+}
+
+.modal-contenido label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    font-size: 1.1rem; /* Etiquetas más grandes */
+}
+
+.modal-contenido p {
+    font-size: 1.2rem; /* Párrafos más grandes */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#Saldo-disponible {
+    font-weight: bold;
+    font-size: 1.5rem; /* Saldo más grande */
+    color: #007bff;
+}
+
+.modal-contenido button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Botones más grandes */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 15px 10px; /* Más margen */
+    font-size: 1.1rem; /* Texto de botones más grande */
+}
+
+#Saldo-disponible {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+
+
+.modal-contenido button:hover {
+    background-color: #0056b3;
+}
+
+.modal-contenido .btn-cancelar,
+.modal-contenido .btn-cerrar {
+    background-color: #6c757d;
+}
+
+.modal-contenido .btn-cancelar:hover,
+.modal-contenido .btn-cerrar:hover {
+    background-color: #5a6268;
+}
+
+.visible {
+    display: flex !important;
+}
+
+.modal-visible {
+    display: block !important;
+}
