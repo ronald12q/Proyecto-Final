@@ -1,7 +1,7 @@
 import { Usuario } from "./Login-JS.js";
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Importar la biblioteca jsPDF para generar PDFs
+    
     const { jsPDF } = window.jspdf;
 
     const Saldo = document.getElementById('saldo-display');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         if (datosGuardados) {
             const datosParseados = JSON.parse(datosGuardados);
-            Usuario.Saldo = parseFloat(datosParseados.Saldo) || 0; // Asegurar que Saldo es un número
+            Usuario.Saldo = parseFloat(datosParseados.Saldo) || 0; 
             Usuario.Nombre = datosParseados.Nombre;
             Usuario.Ncuenta = datosParseados.Ncuenta;
             Historial = datosParseados.Historial || [];
@@ -56,15 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (numero_cuenta) numero_cuenta.textContent = Usuario.Ncuenta;
     if (nombre_cuenta) nombre_cuenta.textContent = Usuario.Nombre;
     // Mostrar saldo con dos decimales
-    if (Saldo) Saldo.textContent = '$' + (Usuario.Saldo || 0).toFixed(2); 
+    if (Saldo) Saldo.textContent =  (Usuario.Saldo || 0).toFixed(2); 
     
     const actualizar_saldo = () => {
         // Mostrar saldo con dos decimales
-        if (Saldo) Saldo.textContent = '$' + (Usuario.Saldo || 0).toFixed(2); 
+        if (Saldo) Saldo.textContent =  (Usuario.Saldo || 0).toFixed(2); 
         guardarDatosUsuario();
     };
     
-    // --- Función formatearCantidad eliminada ---
+    
 
     const obtenerFechaHoraActual = () => {
         const ahora = new Date();
@@ -295,8 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const transactionAmount = document.createElement('span');
             transactionAmount.className = 'transaction-amount';
 
-            // Se usa (transaccion.Monto || 0).toFixed(2) para asegurar dos decimales
-            // y parseFloat para asegurar que es un número antes de toFixed
+          
             const montoFormateado = (parseFloat(transaccion.Monto) || 0).toFixed(2);
             
             switch(transaccion.Tipo.toUpperCase()) {
